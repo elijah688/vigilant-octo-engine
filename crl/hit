@@ -1,0 +1,6 @@
+#!/bin/sh
+
+curl http://localhost:8081/query \
+ -H "content-type: application/json" \
+ -d @data.json | jq . 
+

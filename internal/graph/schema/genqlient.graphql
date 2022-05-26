@@ -1,0 +1,19 @@
+fragment allUser on User {
+  id,
+  name,
+  age
+}
+fragment allTodo on Todo {
+  id
+  text
+  done
+  user {
+    ...allUser
+  }
+}
+
+query GetTodos(){
+  todos() {
+    ...allTodo
+  }
+}
